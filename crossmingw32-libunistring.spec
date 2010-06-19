@@ -10,7 +10,8 @@ Source0:	http://ftp.gnu.org/gnu/libunistring/%{realname}-%{version}.tar.gz
 # Source0-md5:	db8eca3b64163abadf8c40e5cecc261f
 URL:		http://gnu.org/software/libunistring/
 BuildRequires:	crossmingw32-gcc
-Requires:	crossmingw32-runtime
+BuildRequires:	crossmingw32-libiconv
+Requires:	crossmingw32-libiconv
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_strip	1
@@ -61,6 +62,7 @@ Summary:	DLL unistring library for Windows
 Summary(pl.UTF-8):	Biblioteka DLL unistring dla Windows
 Group:		Applications/Emulators
 Requires:	wine
+Requires:	crossmingw32-libiconv-dll
 
 %description dll
 Header files for unistring library.
