@@ -2,12 +2,12 @@ Summary:	Unicode string library - MinGW32 cross version
 Summary(pl.UTF-8):	Biblioteka do obsługi łańcuchów unikodowych - wersja skrośna dla MinGW32
 %define		realname	libunistring
 Name:		crossmingw32-%{realname}
-Version:	0.9.10
+Version:	1.0
 Release:	1
 License:	LGPL v3+ or GPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnu.org/gnu/libunistring/%{realname}-%{version}.tar.xz
-# Source0-md5:	db08bb384e81968957f997ec9808926e
+Source0:	https://ftp.gnu.org/gnu/libunistring/%{realname}-%{version}.tar.xz
+# Source0-md5:	88752c7859212f9c7a0f6cbf7a273535
 URL:		http://gnu.org/software/libunistring/
 BuildRequires:	crossmingw32-gcc
 BuildRequires:	crossmingw32-libiconv
@@ -17,6 +17,7 @@ Requires:	crossmingw32-libiconv
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_strip	1
+%define		_enable_debug_packages	0
 
 %define		target			i386-mingw32
 %define		target_platform 	i386-pc-mingw32
